@@ -16,7 +16,7 @@ Para mais detalhes veja a [documentação oficial][documentacao-oficial]
 
 Para a tarefa proposta aqui nós vamos usar o hook pre-commit.
 Ele é chamado antes do commit ser executado.
-Nosso objetivo é fazer como que o script, antes do commit, execute nossa suite de testes e caso ocorra alguma falha o commit seja rejeitado.
+Nosso objetivo é fazer como que um script execute nossa suite de testes e caso ocorra alguma falha o commit seja rejeitado.
 
 **Vamos ao código**
 
@@ -25,7 +25,7 @@ Nosso objetivo é fazer como que o script, antes do commit, execute nossa suite 
 
 	echo "Rodando os testes..."
 
-	cd Test\
+	cd Test/
 
 	phpunit
 
@@ -40,16 +40,16 @@ Nosso objetivo é fazer como que o script, antes do commit, execute nossa suite 
 
 Como você pode ver, é um script bem simples.
 
-Primeiro nós entramos na pasta de teste, que no meu caso é Test\
+Primeiro nós entramos na pasta de teste, que no meu caso é `Test/`
 Depois nós usamos o comando que executa a suite de testes. No meu caso é phpunit
 
 Por ultimo, é só pegar o retorno do comando que foi executado. Se houver erro nos testes será retornado algo diferente de 0, o que vai fazer com que o commit seja rejeitado. Caso contrário retornamos 0 para o commit ocorrer normalmente
 
 **Tornando o hook executável**
 
-Para que o script que criamos se torne um hook, ele deve ser colocado no diretório de hooks do git, que no caso é seu_projeto/.git/hooks
-No nosso caso o arquivo será salvo com o nome de pre-commit
-Depois é só dar permissão de execução nesse arquivo (chmod +x pre-commit)
+Para que o script que criamos se torne um hook, ele deve ser colocado no diretório de hooks do git, que no caso é `caminho_do_seu_projeto/.git/hooks`
+No nosso caso o arquivo será salvo com o nome de pre-commit.
+Depois é só dar permissão de execução nesse arquivo `chmod +x pre-commit`
 
 Pronto! Agora toda vez que você for fazer um commit os testes serão executados e o commit será rejeitado caso ocorra alguma falha
 
