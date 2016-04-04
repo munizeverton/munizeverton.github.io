@@ -3,7 +3,7 @@ description: Falando sobre desenvolvimento para web
 meta_description: "Desenvolvimento Web, Testes, PHP"
 
 markdown: redcarpet
-highlighter: pygments
+highlighter: rouge
 paginate: 15
 baseurl: /
 domain_name: 'http://munizeverton.github.io/'
