@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Integrando seu projeto no Github com Travis CI"
-date:   2016-04-03 13:00:00
+date:   2016-04-05 15:00:00
 categories: CI Travis Github
 ---
 
